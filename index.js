@@ -6,7 +6,6 @@ add.addEventListener("click", () => {
   let button1 = document.createElement('button')
   let button2 = document.createElement('button')
   let contenttoadd = document.createElement('p')
-  console.log(contenttoadd)
   let para = document.querySelector("input")
   button1.innerHTML = "complete"
   button2.innerHTML = "delete"
@@ -24,7 +23,7 @@ button1.innerHTML = "undo"
 
 }else{
   button1.innerHTML="complete"
-  button1.previousElementSibling.classList.add("nothrough")
+  button1.previousElementSibling.classList.remove("through")
 }
 
 
