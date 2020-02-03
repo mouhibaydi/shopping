@@ -1,56 +1,49 @@
-const deletbutton= document.querySelectorAll(".fa-times");
-const heartbutton=document.querySelectorAll(".fa-heart");
-const plusbutton=document.querySelectorAll(".fa-plus-circle")
-const minusbutton=document.querySelectorAll(".fa-minus-circle")
-const total = document.querySelector(".span1");
+let add = document.querySelector(".add")
 
-Array.from(deletbutton).map(el  => {
-el.addEventListener("click",()  => el.parentElement.parentElement.remove());
-});
+add.addEventListener("click", () => {
+  let firstdiv = document.querySelector(".div3")
+  let newdiv = document.createElement('div')
+  let button1 = document.createElement('button')
+  let button2 = document.createElement('button')
+  let contenttoadd = document.createElement('p')
+  console.log(contenttoadd)
+  let para = document.querySelector("input")
+  button1.innerHTML = "complete"
+  button2.innerHTML = "delete"
+  contenttoadd.innerHTML=para.value
+  newdiv.appendChild(contenttoadd)
+  newdiv.appendChild(button1)
+  newdiv.appendChild(button2)
 
-Array.from(heartbutton).map(el =>{
-    el.addEventListener("click",()=>
-   { el.classList.toggle("red")})
-})
+  firstdiv.appendChild(newdiv)
 
-  Array.from(plusbutton).map(el => {
-    el.addEventListener("click", () => {
-      el.nextElementSibling.innerHTML++;
-      let productPrice = el.parentElement.nextElementSibling.innerHTML.replace(
-        "€",
-        ""
-      );
-      let totalPrice = total.innerHTML.replace("€", "");
-      total.innerHTML = parseInt(totalPrice) + parseInt(productPrice) + "€";
-    });
-  });
-  Array.from(minusbutton).map(el => {
-el.addEventListener("click",()=>{
-    if (el.previousElementSibling.innerHTML != 0){
-    el.previousElementSibling.innerHTML--
-    let productPrice = el.parentElement.nextElementSibling.innerHTML.replace(
-        "€",
-        ""
-      );
-      let totalPrice = total.innerHTML.replace("€", "");
-      total.innerHTML = parseInt(totalPrice) - parseInt(productPrice) + "€";
+button1.addEventListener("click",()=>{
+if(button1.innerHTML==="complete"){
+  button1.previousElementSibling.classList.add("through")  
+button1.innerHTML = "undo"
 
+}else{
+  button1.innerHTML="complete"
+  button1.previousElementSibling.classList.add("nothrough")
 }
 
 
 })
+button2.addEventListener("click",()=>{
+
+button2.parentElement.remove()
+
+
+})
 
 
 
 
-  })
+})
 
-    
-    
-    
-    
 
-    
 
-    
-    
+
+
+
+

@@ -1,37 +1,49 @@
-.dropdown{
+.div1{
+    background: #4696E5;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 50px;
+}
+.p1{
+margin-right:  50px;
+color: white;
+font-size: 100px;
+}
+.p2{
+    margin-right: 50px;
+color: white;
+font-size: 30px;
+}
+button{
+    margin-right: 50px;
+    width: 100px;
+margin-top: 20px;   
+height: 50px;
+background:#4696E5;
+border-radius: 10px;
 
-    margin-left: 850px;
+
+}
+input{
+    margin-right: 50px;
+    width:90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+   
 }
 .div2{
-    margin-top: 50px;
-    background: #353a40;
-    margin-bottom: 20px;
-    padding-top: 15px;
+    text-align: center;
+    color:grey;
+    font-size: 80px;
+}
+.through{
+    text-decoration: line-through;
+}
+.nothrough{
+    text-decoration: none;
+}
 
-padding-bottom: 15px;}
-.p1{
-    color: white;
-    font-size: 25px;
-    margin-left: 20px;
 
-}
-.btn{
-    
-}
-.col1{
-    margin-top: 60px;
-}
-.col2{
-    margin-top: 50px;
-   margin-right: 190px;
-}
-.span1{
-    color: white;
-    margin-left: 50px;
-}
-span{
-    color: black        ;
-}
-.red{
-    color: red;
-}
+
