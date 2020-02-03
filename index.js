@@ -23,7 +23,7 @@ button1.innerHTML = "undo"
 
 }else{
   button1.innerHTML="complete"
-  button1.previousElementSibling.classList.remove("through")
+  button1.previousElementSibling.classList.add("nothrough")
 }
 
 
